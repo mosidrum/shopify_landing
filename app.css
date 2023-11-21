@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap');
+
+:root {
+  --primary: #ffffff;
+  --background: #f1f1f1;
+  --hover: #f7f7f7;
+  --pressed: #f0f0f0;
+  --focused: #005bd3;
+  --nav: #1a1a1a;
+  --gray50: #656266;
+  --gray100: #616161;
+  --gray200: #322f33;
+  --gray300: #1c181d;
+  --font-color-light: #e3e3e3;
+  --font-color-mid: #616161;
+  --font-color-dark: #303030;
+  --stroke-S100: #667085;
+  --stroke-S200: #616161;
+  --span: #36fba1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--background);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--nav);
+  width: 100%;
+  height: 56px;
+}
+
+.container {
+  width: 480px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--stroke-S200);
+}
+
+.container input[type="text"] {
+  all: inherit;
+  padding: 8px 8px 8px 30px;
+  background-image: url("https://crushingit.tech/hackathon-assets/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  gap: 8px;
+  color: var(--font-color-light);
+}
+
+.nav-right .user {
+  display: flex;
+  gap: 8px;
+}
+
+.alert {
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--gray200);
+}
+
+.alert-logo {
+  filter: brightness(0) invert(1);
+  display: flex;
+  align-items: center;
+}
+
+.users {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 2px 8px 8px;
+  height: 36px;
+  align-items: center;
+  background: var(--gray200);
+  border-radius: 8px;
+}
+
+.users span {
+  background: var(--span);
+  border-radius: 8px;
+  padding: 6px;
+  color: var(--gray100);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 8px 12px 16px;
+  margin-top: 32px;
+  width: 800px;
+  border-radius: 8px;
+  background: var(--gray300);
+}
+
+.head .desc {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  color: var(--primary);
+}
+
+.desc button{
+  border-radius: 6px;
+  padding: 6px 12px;
+  background: var(--primary);
+  box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  border: none;
+}
+
+.left-head {
+  display: flex;
+  gap: 8px;
+}
+
+.left-head img {
+  padding: 6px;
+  filter: brightness(0) invert(1);
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.card {
+  display: flex;
+  width: 800px;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 8px;
+  background: var(--primary);
+}
+
+.card-head {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-desc {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.guide {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.count {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.hide-icon {
+  padding: 4px;
+  border: 6px;
+}
+
+.display-icon {
+  display: none;
+  padding: 4px;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .navbar {
+    width: auto;
+    gap: 8px;
+  }
+  .desktop-logo {
+    display: none;
+  }
+
+  .container {
+    width: 238px;
+    height: 32px;
+  }
+
+  .users {
+    background: var(--nav);
+  }
+
+  .users span {
+    margin-left: -8px;
+  }
+
+  .username {
+    display: none;
+  }
+
+  .mobile-logo {
+    display: block;
+  }
+
+  .desc {
+    flex-direction: column;
+  }
+
+  .head {
+    border-radius: 0;
+    align-items: flex-start;
+  }
+
+  .desc {
+    gap: 16px;
+  }
+
+  .desc p, button {
+    align-self: flex-start;
+  }
+
+  .card-desc {
+    display: flex;
+    width: 100%;
+  }
+}
