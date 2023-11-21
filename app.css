@@ -17,6 +17,7 @@
   --stroke-S100: #667085;
   --stroke-S200: #616161;
   --span: #36fba1;
+  --button: #404040;
 }
 
 * {
@@ -157,17 +158,19 @@ main {
 .card-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-top: 16px;
+  border-radius: 8px;
+  background: var(--primary);
+  width: 800px;
+  padding: 8px;
+  margin: 16px auto;
 }
 
 .card {
   display: flex;
-  width: 800px;
   justify-content: space-between;
-  border-radius: 8px;
-  padding: 8px;
-  background: var(--primary);
+  width: 100%;
 }
 
 .card-head {
@@ -209,6 +212,81 @@ main {
 .display-icon {
   display: none;
   padding: 4px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.step-1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 96px;
+  background: var(--background);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.step-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.step-left img {
+  width: 24px;
+  height: 24px;
+}
+
+.step-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.buttons {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.customize {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.choose {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.choose span {
+  color: var(--focused);
+  font-size: 14px;
+}
+
+.choose span:hover {
+  background: cornflowerblue;
+}
+
+.step-text button {
+  align-self: flex-start;
+  border-top: 1.5px solid var(--gray50);
+  border-right: 1.5px solid var(--gray50);
+  border-left: 1.5px solid var(--gray50);
+  border-radius: 6px;
+  padding: 6px 12px;
+  color: var(--primary);
+  background: var(--button);
+  box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333, 0px 2px 0px 0px #000;
 }
 
 
